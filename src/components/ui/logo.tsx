@@ -6,15 +6,16 @@ type Props = {
     size: number;
 }
 
-export const Logo = () => {
+export const Logo = ({ size }: Props) => {
     return (
         <Link href="/">
-            <Image>
+            <Image
                 src={'/logo.png'}
                 alt="Z"
                 width={size}
-                height={serialize,size}
-            </Image>
+                height={size}
+                quality={100}
+            />
         </Link>
-    )
+    );
 }
